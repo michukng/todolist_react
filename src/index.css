@@ -1,13 +1,144 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Yanone+Kaffeesatz&display=swap');
+
+/* RESET */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* VARIABLES */
+
+:root {
+  --BC: rgb(99, 204, 236);
+}
+
+/* MAIN */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid var(--BC);
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  padding: 0 0.25em;
+  height: 75px;
+  font-size: 30px;
+  background-color: var(--BC);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+}
+
+footer {
+  width: 100%;
+  padding: 0.25em;
+  height: 40px;
+  font-size: 30px;
+  background-color: var(--BC);
+  color: aliceblue;
+  display: grid;
+  place-content: center;
+}
+
+.addForm {
+  display: flex;
+  justify-content: flex-start;
+  width: calc(100% - 50px);
+  height: 48px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.addForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.addForm input[type='text'] {
+  width: 100%;
+  padding: 0 1em;
+  font-size: 1.25em;
+  outline: none;
+  border: 1px solid var(--BC);
+}
+
+.addForm > button {
+  margin-left: 5px;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1em;
+  border: 1px solid var(--BC);
+  color: var(--BC);
+}
+
+.addForm > button:hover,
+.addForm > button:focus {
+  background-color: rgb(56, 234, 56);
+  border: 1px solid black;
+  color: black;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  padding: 0 5px 0 5px;
+}
+
+li {
+  background-color: rgb(237, 237, 235);
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+li > input[type='checkbox'] {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  accent-color: var(--BC);
+}
+
+li > button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: var(--BC);
+  display: inline-block;
+  padding-top: 5px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+li > button:hover,
+li > button:focus {
+  color: red;
+  outline: none;
 }
